@@ -65,6 +65,9 @@
 (defvar aluminium4 "#888a85")
 (defvar aluminium5 "#555753")
 (defvar aluminium6 "#2e3436")
+(defvar dark-red "#691212")
+(defvar dark-yellow "#6b6024")
+(defvar dark-magenta "#2a7372")
 
 (defun color-theme-oblivion ()
   (interactive)
@@ -78,8 +81,10 @@
 
      ;;; define some reusable faces that we can inherit from afterwards
      (strong-face ((t (:weight bold))))
-     (warning-face ((t (:foreground ,orange3 :weight bold :underline t))))
-     (error-face ((t (:foreground ,scarletred3 :weight bold :underline t))))
+;;     (warning-face ((t (:foreground ,orange3 :weight bold :underline t))))
+;;     (error-face ((t (:foreground ,scarletred3 :weight bold :underline t))))
+     (warning-face ((t (:background ,dark-yellow))))
+     (error-face ((t (:background ,dark-red))))
 
      ;;; basic coloring
      (default ((t (:foreground ,aluminium2))))
@@ -113,7 +118,7 @@
      (font-lock-comment-delimiter-face ((t (:foreground ,aluminium4))))
      (font-lock-constant-face ((t (:foreground ,scarletred1))))
      (font-lock-doc-face ((t (:foreground ,aluminium4 :slant italic))))
-     (font-lock-doc-string-face ((t (:foreground ,skyblue1))))
+     (font-lock-doc-string-face ((t (:foreground ,chocolate1))))
      (font-lock-function-name-face ((t (:foreground ,skyblue1))))
      (font-lock-keyword-face ((t (:foreground plum1))))
      (font-lock-negation-char-face ((t (:foreground ,chameleon1))))
@@ -139,7 +144,7 @@
      (diff-removed ((t (:foreground ,scarletred1))))
      (diff-header ((t (:background ,aluminium5))))
      (diff-file-header
-      ((t (:background ,skyblue3 :foreground ,aluminium1 :bold t))))
+      ((t (:background ,skyblue1 :foreground ,aluminium1 :bold t))))
 
      ;; eshell
      (eshell-prompt ((t (:inherit strong-face))))
